@@ -17,6 +17,7 @@ class App extends Component {
   getRecipe = e => {
     e.preventDefault();
     let recipeName = e.target.elements.recipeName.value;
+    console.log("recipe name is",recipeName);
     if (!recipeName) {
       recipeName = "rice";
     }
@@ -27,7 +28,7 @@ class App extends Component {
       APP_ID +
       "&app_key=" +
       APP_KEY +
-      "&from=0&to=10&count=0";
+      "&from=0&to=24&count=0";
 
     if (!recipeName) {
       recipeName = "fish";
