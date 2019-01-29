@@ -22,7 +22,7 @@ class Recipe extends React.Component {
       console.log(this.state.activeRecipe.length);
       if (this.state.activeRecipe.length !== 0) {
         return (
-          <div className="activeRecipe">
+          <div className="activeRecipe" id="top">
             <img
               className="active-recipe__img"
               src={data.imageURL}
@@ -36,11 +36,9 @@ class Recipe extends React.Component {
                 <a href="#">This si the website</a>
               </span>
             </p>
-            <button className="active-recipe__button">
-            <Link to="/">
+            <Link to="/" className="active-recipe__button">
             Back
             </Link>
-            </button>
           </div>
         );
       } else {

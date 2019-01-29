@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 class Recipes extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid recipe__con">
         <div className="row">
           {this.props.recipeData.map((recipeLists, i) => {
             let data = recipeLists.recipe;
@@ -52,13 +52,16 @@ class Recipes extends Component {
                       </p>
                     </div>
                   </div>
-                  <div className="">
-                    <button className="recipe_buttons ">
-                      <Link to={{ 
-                        pathname: "/recipe/" + recipe.ID,
-                        state:{recipe: recipe}
-                    }}>View Recipe</Link>
-                    </button>
+                  <div className="">       
+                      <Link
+                        to={{
+                          pathname: "/recipe/" + recipe.ID,
+                          state: { recipe: recipe }
+                        }}
+                        className="recipe_buttons recipe_btn_link"
+                      >
+                        View Recipe
+                      </Link>
                   </div>
                 </div>
               </div>

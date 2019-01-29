@@ -1,3 +1,10 @@
+
+@media (max-width: 1130px) {
+    .row {
+        justify-content: center;
+    }
+}
+
 @media (min-width: 576px) {
     .col-md-4 {
         -ms-flex: 0 0 29.333333%;

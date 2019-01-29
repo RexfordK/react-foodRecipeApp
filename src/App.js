@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
+import "./App_Querry.css";
 import Form from "./components/form/Form.js";
+import Nav from "./components/nav/Nav.js";
+import Footer from "./components/footer/Footer.js";
+
 import es6_promise from "es6-promise";
 import isomorphic_fetch from "isomorphic-fetch";
 import Recipes from "./components/recipes/Recipes.js";
@@ -17,7 +21,7 @@ class App extends Component {
   getRecipe = e => {
     e.preventDefault();
     let recipeName = e.target.elements.recipeName.value;
-    console.log("recipe name is",recipeName);
+    console.log("recipe name is", recipeName);
     if (!recipeName) {
       recipeName = "rice";
     }
@@ -34,7 +38,7 @@ class App extends Component {
       recipeName = "fish";
     }
 
-    const api_call =  fetch(request)
+    const api_call = fetch(request)
       .then(response => {
         if (response.status != 200) {
           throw new Error(response.status + " Bad response from server");
@@ -42,8 +46,9 @@ class App extends Component {
         return response.json();
       })
       .then(data => {
+        // this.componentDidMount();
         this.setState({ recipeArray: data.hits });
-        console.log(this.state.recipeArray)
+        console.log(this.state.recipeArray);
       });
   };
 
@@ -65,26 +70,31 @@ class App extends Component {
     return num;
   };
 
-  componentDidMount = () => {
+  componentDidMount() {
     const json = localStorage.getItem("recipes");
-    const recipes = JSON.parse(json);
-    this.setState({recipeArray: recipes});
-  }
-
+    if(json) {
+      const recipes = JSON.parse(json);
+        this.setState({ recipeArray: recipes });
+      }
+  };
+  
   componentDidUpdate = () => {
     const recipesData = JSON.stringify(this.state.recipeArray);
     localStorage.setItem("recipes", recipesData);
-  }
+  };
 
   render() {
     const arr = this.state.recipeArray;
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Recipe Search</h1>
-        </header>
+        <Nav />
+        <section className="section">
         <Form getRecipe={this.getRecipe} />
-        <Recipes recipeData={this.state.recipeArray}/>
+        <Recipes recipeData={this.state.recipeArray} />
+        </section>
+        <section>
+          <Footer/>
+        </section>
       </div>
     );
   }

@@ -1,0 +1,84 @@
+.nav-container {
+  background-color: #2c3e50;
+  box-shadow: 1px 2px 6px rgba(242, 115, 49, 0.3);
+  width: 100%;
+}
+
+.App {
+  text-align: center;
+}
+
+.nav-content {
+  padding: 30px 0;
+  height: 90px;
+  display: flex;
+  color: #eee;
+}
+
+.App-header {
+  flex-basis: 100%;
+  text-align: left;
+}
+
+.App-title {
+  display: inline-block;
+  font-size: 1.6em;
+}
+
+.App-title:hover {
+  color: #f27331;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-content-lists {
+  display: block;
+  width: 100%;
+  text-align: right;
+  list-style: none;
+  font-size: 1em;
+}
+
+.nav-content-lists:after {
+  clear: both;
+}
+
+.nav-content-lists li {
+  padding: 0 20px;
+  float: right;
+}
+
+.nav-content-lists a {
+  color: #eee;
+}
+
+.nav-content-lists a:hover {
+  color: #f27331;
+}
+
+.nav-content-lists a:hover,
+.nav-content a:focus,
+.nav-content a:active {
+  text-decoration: none;
+}
+
+/* nav search form */
+.nav-content .formStyle {
+  display: none;
+  align-items: center;
+  width: 100%;
+  text-align: right;
+}
+
+.nav-content .form__input {
+  width: 100%;
+  border-bottom: 2px solid rgba(238, 238, 238, 0.8);
+  background-color: #eee;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: #42586e;
+}
+
+.nav-content .form__button {
+  color: #eee;
+}

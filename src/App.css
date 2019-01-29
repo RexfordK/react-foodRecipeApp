@@ -1,5 +1,12 @@
+/* https://colorhunt.co/palette/136945 */
 body {
   background:#f3f3f3;
+  font-family: 'Roboto Slab', serif;
+}
+
+.section {
+  max-width: 1140px;
+  margin: 2em auto;
 }
 
 img {
@@ -8,50 +15,23 @@ img {
 }
 
 a {
-  color: #e74c3c !important;
+  color: #f16821;
+}
+
+a:hover {
+  color: #c24a0c;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:not(:hover),
+h1:not(:hover)
+{
+  transition: color 0.2s;
 }
 
 button:focus {
   outline: none;
-}
-
-.App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #2c3e50;
-  height: 90px;
-  padding: 30px;
-  color: white;
-  margin-bottom: 2rem;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-
-.form__input {
-  background: transparent;
-  border: 0;
-  border-bottom: solid 2px #2c3e50;
-  margin-right: 10px;
-  letter-spacing: 2px;
-  width: 10%;
-  padding: 0.4rem;
-}
-
-.form__button {
-  border: solid 2px #e74c3c;
-  background: transparent;
-  padding: 0.2rem 0.9rem;
-  margin: 0 0.2rem;
-  border-radius: 1px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-left: 0.7rem;
 }
 
 input[type="text"] { 
@@ -97,12 +77,12 @@ input:-webkit-autofill {
   text-transform: lowercase;
   font-weight: 300;
   letter-spacing: 2px;
-  color: #e74c3c;
+  color: #f16821;
   margin-left: 10px;
 }
 
 .active-recipe__button {
-  border: solid 2px #e74c3c;
+  border: solid 2px #f16821;
   background: transparent;
   padding: 0.2rem 0.9rem;
   margin: 0 0.2rem;
