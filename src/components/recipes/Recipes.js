@@ -6,6 +6,11 @@ import "./Recipes_Querry.css";
 import { Link } from "react-router-dom";
 
 class Recipes extends Component {
+
+  numberWithCommas = (x)  => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
   render() {
     return (
       <div className="container-fluid recipe__con">
@@ -17,7 +22,7 @@ class Recipes extends Component {
               label: data.label,
               imageURL: data.image,
               ingrediant: data.ingrediants,
-              calories: Math.floor(data.calories),
+              calories: this.numberWithCommas(Math.floor(data.calories)),
               dietLabels: data.dietLabels,
               url: data.url
             };

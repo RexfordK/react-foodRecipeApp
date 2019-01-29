@@ -16,6 +16,8 @@ class Recipe extends React.Component {
     this.setState({ activeRecipe: recipe });
   };
 
+
+
   render() {
     const data = this.state.activeRecipe;
     let displayData = () => {
