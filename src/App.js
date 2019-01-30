@@ -19,11 +19,14 @@ class App extends Component {
   };
 
   getRecipe = e => {
-    e.preventDefault();
-    let recipeName = e.target.elements.recipeName.value;
-    console.log("recipe name is", recipeName);
+    let recipeName;
+    if (e) {
+      e.preventDefault();
+      recipeName = e.target.elements.recipeName.value;
+    }
+    // console.log("recipe name is", recipeName);
     if (!recipeName) {
-      recipeName = "rice";
+      recipeName = "pizza";
     }
     let request =
       "https://api.edamam.com/search?q=" +
@@ -62,39 +65,33 @@ class App extends Component {
     return temp;
   };
 
-  createNumArr = arr => {
-    let num = [];
-    for (let x = 0; x < arr.length; x++) {
-      num.push(x);
-    }
-    return num;
-  };
-
   componentDidMount() {
+    this.getRecipe();
     const json = localStorage.getItem("recipes");
-    if(json) {
+    if (json) {
       const recipes = JSON.parse(json);
-        this.setState({ recipeArray: recipes });
-      }
-  };
-  
+      this.setState({ recipeArray: recipes });
+    }
+  }
+
   componentDidUpdate = () => {
     const recipesData = JSON.stringify(this.state.recipeArray);
     localStorage.setItem("recipes", recipesData);
   };
 
   render() {
+    // if(this.state.recipeArray.length)
+
+
     const arr = this.state.recipeArray;
     return (
       <div className="App">
         <Nav />
         <section className="section">
-        <Form getRecipe={this.getRecipe} />
-        <Recipes recipeData={this.state.recipeArray} />
+          <Form getRecipe={this.getRecipe} />
+          <Recipes recipeData={this.state.recipeArray} />
         </section>
-        <section>
-          <Footer/>
-        </section>
+        <Footer />
       </div>
     );
   }

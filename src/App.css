@@ -1,4 +1,10 @@
 /* https://colorhunt.co/palette/136945 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 body {
   background:#f3f3f3;
   font-family: 'Roboto Slab', serif;
