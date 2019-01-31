@@ -22,10 +22,15 @@
 
   .form__button:active
   {
-      color: #c24a0c;
+      background-color: #d6dfe9;
   }
 
   .form__button:focus
   {
       border-color: #2c3e50;
+  }
+
+  .form__button:hover {
+      color: #c24a0c;
+      border-color: #d2500d;
   }

@@ -26,7 +26,7 @@ class App extends Component {
     }
     // console.log("recipe name is", recipeName);
     if (!recipeName) {
-      recipeName = "pizza";
+      recipeName = "pie";
     }
     let request =
       "https://api.edamam.com/search?q=" +
@@ -86,12 +86,11 @@ class App extends Component {
     const arr = this.state.recipeArray;
     return (
       <div className="App">
-        <Nav />
+        <Nav/>
         <section className="section">
           <Form getRecipe={this.getRecipe} />
           <Recipes recipeData={this.state.recipeArray} />
         </section>
-        <Footer />
       </div>
     );
   }

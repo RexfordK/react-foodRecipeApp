@@ -21,13 +21,15 @@ class Recipes extends Component {
               ID: data.uri.substring(51, data.uri.length - 1),
               label: data.label,
               imageURL: data.image,
-              ingrediant: data.ingrediants,
-              calories: this.numberWithCommas(Math.floor(data.calories)),
+              healthLabels: data.healthLabels,
+              ingredient: data.ingredientLines,
+              calories: data.calories,
+              numberOfServings: data.yield,
               dietLabels: data.dietLabels,
-              url: data.url
+              prepareMeal: data.url,
+              prepareMeal2: data.uri
             };
 
-            console.log(recipe.ID);
             return (
               <div key={i} className="recipes__box">
                 <div key={i}>
@@ -38,13 +40,13 @@ class Recipes extends Component {
                   />
                   <div className="recipe__text">
                     <h5 className="recipes__title">
-                      {recipe.label.length < 25
+                      {recipe.label.length < 22
                         ? recipe.label
-                        : recipe.label.substring(0, 25) + "..."}
+                        : recipe.label.substring(0, 22) + "..."}
                     </h5>
                     <div className="recipes_sub">
                       <p className="recipes_subtitle">
-                        <span>{recipe.calories + " "}</span>
+                        <span>{this.numberWithCommas(Math.floor(recipe.calories)) + " "}</span>
                         <span className="recipes_subtitle_logo">calories</span>
                       </p>
                       <p className="recipes_subtitle">
@@ -61,7 +63,7 @@ class Recipes extends Component {
                       <Link
                         to={{
                           pathname: "/recipe/" + recipe.ID,
-                          state: { recipe: recipe }
+                          state: { recipe: recipe, fish:true}
                         }}
                         className="recipe_buttons recipe_btn_link"
                       >

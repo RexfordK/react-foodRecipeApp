@@ -23,10 +23,12 @@
   text-align: left;
   overflow: hidden;
   min-height: 372px;
+  width: 340px;
 }
 
 .recipe__box-img{
   min-width: 300px; 
+  min-height: 220px;
 }
 
 .recipe__text {
@@ -69,32 +71,4 @@
   font-size: 1.25rem;
   font-weight: 600;
   padding-left: 2px;
-}
-
-.recipe_buttons a:hover,
-.recipe_buttons a:active,
-.recipe_buttons a:focus
-{
-  text-decoration: none;
-}
-
-.recipe_buttons a:hover {
-  color: #c24a0c;
-}
-
-.recipe_buttons:focus {
-  border-color: #42586e;
-}
-
-.recipe_btn_link:focus {
-outline: none;
-}
-
-.active-recipe__button a:focus {
-  text-decoration: none;
-}
-
-.active-recipe__button a:focus {
-  outline: none;
-  border-color: #42586e;
 }

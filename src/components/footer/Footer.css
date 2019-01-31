@@ -22,7 +22,10 @@ footer h3:not(:hover){
 }
 
 .footer-con {
+  position: absolute;
+  bottom: 0;
   padding: 20px 0 10px;
+  width: 100%;
 }
 
 footer {
