@@ -4,6 +4,7 @@ import "./App_Querry.css";
 import Form from "./components/form/Form.js";
 import Nav from "./components/nav/Nav.js";
 import Footer from "./components/footer/Footer.js";
+import Page404 from "./components/page404/Page404.js";
 
 import es6_promise from "es6-promise";
 import isomorphic_fetch from "isomorphic-fetch";
@@ -26,7 +27,7 @@ class App extends Component {
     }
     // console.log("recipe name is", recipeName);
     if (!recipeName) {
-      recipeName = "pie";
+      recipeName = "jollof rice";
     }
     let request =
       "https://api.edamam.com/search?q=" +
@@ -55,6 +56,8 @@ class App extends Component {
       });
   };
 
+  
+
   handleData = () => {
     var data = this.state.recipeArray;
     var temp = [];
@@ -80,16 +83,13 @@ class App extends Component {
   };
 
   render() {
-    // if(this.state.recipeArray.length)
-
-
     const arr = this.state.recipeArray;
     return (
       <div className="App">
-        <Nav/>
+        <Nav getRecipe={this.getRecipe}/>
         <section className="section">
           <Form getRecipe={this.getRecipe} />
-          <Recipes recipeData={this.state.recipeArray} />
+          {this.state.recipeArray.length === 0 ? <Page404/> : <Recipes recipeData={this.state.recipeArray} /> }
         </section>
       </div>
     );
