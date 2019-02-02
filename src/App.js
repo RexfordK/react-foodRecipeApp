@@ -15,7 +15,7 @@ const APP_KEY = "f77c1ab3af8bd112915bad3fd3b00119";
 class App extends Component {
   state = {
     recipeArray: [],
-    firstSearch: true
+    search: ""
   };
 
   getRecipe = e => {
@@ -23,11 +23,17 @@ class App extends Component {
     if (e) {
       e.preventDefault();
       recipeName = e.target.elements.recipeName.value;
+      this.setState({search: recipeName},function() {
+        if (this.state.search === "") {
+          recipeName = "pizza";
+        } else {
+          recipeName = this.state.search;
+        }
+      })
+    } else {
+      recipeName = "pie";
     }
-    // console.log("recipe name is", recipeName);
-    if (!recipeName) {
-      recipeName = "pizza";
-    }
+   
     let request =
       "https://api.edamam.com/search?q=" +
       recipeName +
@@ -63,11 +69,12 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.getRecipe();
     const json = localStorage.getItem("recipes");
     if (json) {
       const recipes = JSON.parse(json);
       this.setState({ recipeArray: recipes });
+    } else {
+      this.getRecipe();
     }
   }
 
