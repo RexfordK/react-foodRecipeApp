@@ -26,7 +26,7 @@ class App extends Component {
     }
     // console.log("recipe name is", recipeName);
     if (!recipeName) {
-      recipeName = "jollof rice";
+      recipeName = "pizza";
     }
     let request =
       "https://api.edamam.com/search?q=" +
@@ -37,9 +37,6 @@ class App extends Component {
       APP_KEY +
       "&from=0&to=24&count=0";
 
-    if (!recipeName) {
-      recipeName = "fish";
-    }
 
     const api_call = fetch(request)
       .then(response => {
