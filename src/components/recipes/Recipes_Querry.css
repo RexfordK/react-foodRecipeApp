@@ -8,3 +8,15 @@
         width: 25%;
     }
 }
+
+@media (max-width: 776px) {
+    .recipe__box-img {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .recipes_sub {
+        flex-direction: column;
+    }
+}

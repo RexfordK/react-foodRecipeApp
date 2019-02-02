@@ -7,31 +7,44 @@ import { slide as Menu } from "react-burger-menu";
 
 class Nav extends React.Component {
   state = {
-    isActive: false
+    isActive: true,
+    toggleNavClass: ""
+  };
+
+  toggleNavClick = () => {
+   this.setState((prevState) => ({
+    isActive: !prevState.isActive
+   }));
+   console.log(this.state);
+   this.toggleNav();
   };
 
   toggleNav = () => {
-    let toggle = this.state.isActive;
-    console.log("clicked");
+    if(this.state.isActive) {
+      this.setState({toggleNavClass : "is-active"});
+    } else {
+      this.setState({toggleNavClass : ""});
+    }
   };
 
   render() {
     return (
-      <nav className="navbar is-transparent">
+      <nav className="navbar is-transparent is-fixed-top">
         <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
+          <a className="navbar-item" href="#top">
             <h1><i className="fas fa-hamburger"></i>YummyFood</h1>
           </a>
           <div
             className="navbar-burger burger"
             data-target="navbarExternalLinks"
+            onClick={this.toggleNavClick}
           >
             <span />
             <span />
             <span />
           </div>
         </div>
-        <div id="navbarExternalLinks" className="navbar-menu" onClick={this.toggleNav}>
+        <div id="navbarExternalLinks" className={"navbar-menu "+ this.state.toggleNavClass}>
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="field is-grouped">

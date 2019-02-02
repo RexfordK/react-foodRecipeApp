@@ -36,7 +36,7 @@ class App extends Component {
       APP_ID +
       "&app_key=" +
       APP_KEY +
-      "&from=0&to=24&count=0";
+      "&from=0&to=50&count=0";
 
     if (!recipeName) {
       recipeName = "fish";

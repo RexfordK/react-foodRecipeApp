@@ -6,10 +6,23 @@ import "./Recipes_Querry.css";
 import { Link } from "react-router-dom";
 
 class Recipes extends Component {
-
-  numberWithCommas = (x)  => {
+  numberWithCommas = x => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+  };
+
+  spliceRecipeName = recipe => {
+    let screenWidth = window.innerWidth;
+    console.log(screenWidth);
+    if (screenWidth > 776) {
+      if (recipe.label.length < 22) {
+        return recipe.label;
+      } else {
+        return recipe.label.substring(0, 22) + "...";
+      }
+    } else {
+      return recipe.label;
+    }
+  };
 
   render() {
     return (
@@ -40,13 +53,14 @@ class Recipes extends Component {
                   />
                   <div className="recipe__text">
                     <h5 className="recipes__title">
-                      {recipe.label.length < 22
-                        ? recipe.label
-                        : recipe.label.substring(0, 22) + "..."}
+                      {this.spliceRecipeName(recipe)}
                     </h5>
                     <div className="recipes_sub">
                       <p className="recipes_subtitle">
-                        <span>{this.numberWithCommas(Math.floor(recipe.calories)) + " "}</span>
+                        <span>
+                          {this.numberWithCommas(Math.floor(recipe.calories)) +
+                            " "}
+                        </span>
                         <span className="recipes_subtitle_logo">calories</span>
                       </p>
                       <p className="recipes_subtitle">
@@ -59,16 +73,16 @@ class Recipes extends Component {
                       </p>
                     </div>
                   </div>
-                  <div className="">       
-                      <Link
-                        to={{
-                          pathname: "/recipe/" + recipe.ID,
-                          state: { recipe: recipe, fish:true}
-                        }}
-                        className="recipe_buttons recipe_btn_link"
-                      >
-                        View Recipe
-                      </Link>
+                  <div className="">
+                    <Link
+                      to={{
+                        pathname: "/recipe/" + recipe.ID,
+                        state: { recipe: recipe, fish: true }
+                      }}
+                      className="recipe_buttons recipe_btn_link"
+                    >
+                      View Recipe
+                    </Link>
                   </div>
                 </div>
               </div>
