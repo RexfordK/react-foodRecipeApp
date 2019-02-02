@@ -4,10 +4,14 @@ import "./App_Querry.css";
 import Form from "./components/form/Form.js";
 import Nav from "./components/nav/Nav.js";
 import Page404 from "./components/page404/Page404.js";
-
+import smoothscroll from 'smoothscroll-polyfill';
+import "normalize.css";
 import es6_promise from "es6-promise";
 import isomorphic_fetch from "isomorphic-fetch";
 import Recipes from "./components/recipes/Recipes.js";
+
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 // https://www.food2fork.com/api/search?key=397927fba082a77b5a8b29291cfc676a&q=shredded%20chicken
 const APP_ID = "47953d16";
@@ -83,13 +87,17 @@ class App extends Component {
     localStorage.setItem("recipes", recipesData);
   };
 
+  smoothScroll = () => {
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+  };
+
   render() {
     const arr = this.state.recipeArray;
     return (
       <div className="App">
-        <Nav getRecipe={this.getRecipe}/>
+        <Nav getRecipe={this.getRecipe} smoothScroll={this.smoothScroll}/>
         <section className="section">
-          <Form getRecipe={this.getRecipe}/>
+          <Form getRecipe={this.getRecipe} smoothScroll={this.smoothScroll}/>
           {this.state.recipeArray.length === 0 && localStorage.getItem("recipes") ? <Page404/> : <Recipes recipeData={this.state.recipeArray} /> }
         </section>  
       </div>

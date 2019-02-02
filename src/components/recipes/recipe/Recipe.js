@@ -30,7 +30,6 @@ class Recipe extends React.Component {
   renderIngredientList = () => {
     const ingredientList = this.state.activeRecipe.ingredient;
     let tags = [];
-    console.log(ingredientList);
     for(let x = 0; x < ingredientList.length; x++) {
       tags.push(<li key={x}>{ingredientList[x]}</li>)
     }
@@ -77,7 +76,7 @@ class Recipe extends React.Component {
                 <Link to="/" className="active-recipe__button">
                   Back
                 </Link>
-                  <a href={data.prepareMeal ? data.prepareMeal : data.prepareMeal2} className="prepareBtn" target="_blank">Prepare Meal</a>
+                  <a href={data.prepareMeal ? data.prepareMeal : data.prepareMeal2} className="prepareBtn" target="_blank"  rel="noopener noreferrer">Prepare Meal</a>
                 </div>
                 <p className="calorie-disclaimer">
                   *Percent Daily Values are based on a 2,000 calorie diet. Your
@@ -102,10 +101,10 @@ class Recipe extends React.Component {
       }
     };
 
-    console.log(data);
+    // console.log(data);
     // console.log(this.props);
     return (
-      <div className="container">
+      <div className="container" onLoad={() => window.scrollTo(0, 0)}>
         <div className="recipe-con">{displayData()}</div>
       </div>
     );
