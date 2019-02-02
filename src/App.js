@@ -5,6 +5,7 @@ import Form from "./components/form/Form.js";
 import Nav from "./components/nav/Nav.js";
 import Page404 from "./components/page404/Page404.js";
 import smoothscroll from 'smoothscroll-polyfill';
+import "normalize.css";
 import es6_promise from "es6-promise";
 import isomorphic_fetch from "isomorphic-fetch";
 import Recipes from "./components/recipes/Recipes.js";
