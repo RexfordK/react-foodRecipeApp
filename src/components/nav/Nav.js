@@ -3,7 +3,6 @@ import "./Nav.css";
 import "./Nav_Querry.css";
 
 import Form from "../form/Form.js";
-import { slide as Menu } from "react-burger-menu";
 
 class Nav extends React.Component {
   state = {
@@ -62,6 +61,7 @@ class Nav extends React.Component {
                     data-social-action="tweet"
                     data-social-target="http://localhost:4000"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/RexfordK/react-foodRecipeApp"
                   >
                     <span className="icon">
@@ -75,6 +75,7 @@ class Nav extends React.Component {
                     className="button is-primary"
                     href="https://RkDevelopment.org"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <span className="icon">
                       <i className="fas fa-download" />
