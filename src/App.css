@@ -1,32 +1,41 @@
-.App {
-  text-align: center;
+/* https://colorhunt.co/palette/136945 */
+body {
+  background:#f3f3f3;
+  font-family: 'Roboto Slab', serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.section {
+  max-width: 1140px;
+  margin: 68px auto 2em;
+  padding: 2rem 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+  color: #f16821;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+  color: #42586e;
+  border-color: #d2500d;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:not(:hover),
+h1:not(:hover)
+{
+  transition: color 0.2s;
+}
+
+button:focus {
+  outline: none;
+}
+
+input[type="text"] { 
+  outline: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #f3f3f3 inset;
+  -webkit-text-fill-color: #2c3e50 !important;
 }

@@ -1,0 +1,55 @@
+.navbar {
+    align-items: center;
+}
+
+.navbar .formStyle {
+    display: none;
+}
+
+.navbar-item h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+/* .navbar>.navbar-brand{
+    flex-grow: 0.25;
+    font-size: 1.2em;
+} */
+
+a.navbar-item:hover{
+    color: #d2500d;
+}
+
+h1:not(:hover) {
+    transition: all 0.1s;
+    transition-delay: 0s;
+}
+
+.navbar>.navbarExternalLinks{
+flex-grow: 0.75;
+}
+
+.button.is-primary {
+    background-color: #f16821;
+}
+
+.navbar-item {
+    color: #f16821;
+}
+
+.is-primary {
+    background-color: #f16821;
+}
+
+.button.is-primary:hover {
+    background-color: #d2500d;
+}
+/* nav search form */
+.navbar>.formStyle {
+    flex-grow: 1;
+    text-align: right;
+}
+  
+.fas {
+    padding-right: 5px;
+}

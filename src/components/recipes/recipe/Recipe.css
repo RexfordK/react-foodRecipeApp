@@ -1,0 +1,155 @@
+
+
+.container {
+  margin: 14px auto;
+}
+
+.recipe-con {
+  max-width: 788px;
+  margin: 0 auto;
+}
+
+.recipe_buttons a:hover,
+.recipe_buttons a:active,
+.recipe_buttons a:focus {
+  text-decoration: none;
+}
+
+.recipe_buttons a:hover {
+  color: #c24a0c;
+}
+
+.recipe_buttons:focus {
+  border-color: #42586e;
+}
+
+.recipe_btn_link:focus {
+  outline: none;
+}
+
+.activeRecipe {
+  background-color: #fff;
+  border: 2px solid #42586e;
+  box-shadow: -2px 2px 2px #c2490c50;
+  padding: 20px;
+}
+
+/* info row 1 */
+.activeRecipe-row1 {
+  display: flex;
+  border-bottom: 2px solid black;
+}
+
+.row1-imgCon {
+  padding: 10px;
+}
+
+.row1-imgCon {
+  text-align: center;
+  flex-basis: 50%;
+}
+
+.row1-recipeInfo {
+  flex-basis: 50%;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+}
+
+.recipeInfo-details {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0 20px;
+}
+
+.calorie-disclaimer {
+  font-size: 0.75em;
+  position: absolute;
+  bottom: 7px;
+}
+
+.board {
+  margin: 0;
+  height: 64px;
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+.recipeInfo-btns {
+  padding: 30px 0;
+}
+
+.recipeInfo-btns a:first-child {
+  margin-right: 50px;
+}
+
+.prepareBtn {
+  padding: 0.2rem 0.9rem;
+  border: 2px solid #42586e;
+  color: #42586e;
+}
+
+.prepareBtn:hover {
+  color: #f16821;
+  border-color: #2F4094;
+}
+.active-recipe_label {
+  font-size: 1.5em;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+.active-recipe__button:hover {
+  color: #42586e;
+  border-color: #d2500d;
+}
+
+.active-recipe__button:focus {
+  text-decoration: none;
+}
+
+.active-recipe__button:focus {
+  border-color: #42586e;
+}
+/* info row 1 end */
+.active-recipe {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.active-recipe_label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.active-recipe__website span {
+  text-transform: lowercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #f16821;
+  margin-left: 10px;
+}
+
+.active-recipe__button {
+  border: solid 2px #f16821;
+  background: transparent;
+  padding: 0.2rem 0.9rem;
+  margin: 0 0.2rem;
+  border-radius: 1px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* infor row 2 start */
+.recipe-info2 h4 {
+  padding-top: 10px;
+}
+
+.ingredientList-con{
+  list-style: inherit;
+  padding-inline-start: 40px;
+}
+
+.ingredientList-con li {
+  padding: 5px;
+}

@@ -1,0 +1,122 @@
+
+.email-style {
+  color: #333;
+}
+
+#p13 {
+  margin-top: 10px;
+}
+
+.email-style:hover,
+.email-style:focus {
+  color: #d35400;
+  text-decoration: none;
+}
+
+footer h3:hover {
+  color: #d35400;
+}
+
+footer h3:not(:hover){
+    transition: all 0.3s;
+}
+
+.footer-con {
+  position: absolute;
+  bottom: 0;
+  padding: 20px 0 10px;
+  width: 100%;
+}
+
+footer {
+  background-color: #1a1a1a;
+}
+
+.footer-con,
+.footer-con p {
+  color: #eee;
+}
+
+.social-list {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.social-list li {
+  float: left;
+  padding: 10px 20px;
+  font-size: 200%;
+}
+
+.social-list li a {
+  color: #6e6e6e;
+}
+
+.ion-social-facebook:hover,
+.ion-social-facebook:active {
+  color: #3b5998;
+}
+
+.social-list i:not(:hover){
+    transition: all 0.5s;
+}
+
+.ion-social-github:hover,
+.ion-social-github:active {
+  color: #bbb;
+}
+
+.ion-social-linkedin:hover,
+.ion-social-linkedin:active {
+  color: #007bb5;
+}
+
+.ion-fireball:hover,
+.ion-fireball:active {
+  color: darkgreen;
+}
+
+.resume-btn-con {
+  padding-bottom: 15px;
+}
+
+.resume-btn {
+  background: none;
+  border-radius: 15px;
+  text-decoration: none;
+  padding: 5px;
+  border-style: none;
+  border: solid 2px #4c4c4c;
+  color: #eee;
+}
+
+.resume-btn:link,
+.resume-btn:active {
+  text-decoration: none;
+}
+
+.resume-btn:hover,
+.resume-btn:focus {
+  color: #eee;
+}
+
+.resume-btn:hover,
+.resume-btn:active {
+  border-color: #d35400;
+}
+
+.resume-btn:not(:hover){
+    transition: all 0.3s;
+}
+
+.resume-btn a {
+  color: #eee;
+  text-decoration: none;
+}
+
+.resume-btn a:hover,
+.resume-btn a:active {
+  text-decoration: none;
+}

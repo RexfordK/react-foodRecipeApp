@@ -1,0 +1,22 @@
+
+@media (max-width: 1148px) {
+    .row {
+        justify-content: center;
+    }
+
+    .form__input {
+        width: 25%;
+    }
+}
+
+@media (max-width: 776px) {
+    .recipe__box-img {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .recipes_sub {
+        flex-direction: column;
+    }
+}

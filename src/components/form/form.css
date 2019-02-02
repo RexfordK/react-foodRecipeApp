@@ -1,0 +1,40 @@
+.formStyle {
+    text-align: center;
+}
+
+.form__input {
+    background: transparent;
+    border: 0;
+    border-bottom: solid 2px #2c3e50;
+    margin-right: 10px;
+    letter-spacing: 2px;
+    width: 15%;
+    padding: 0.4rem;
+  }
+  
+  .form__button {
+    border: solid 2px #f16821;
+    background: transparent;
+    padding: 0.2rem 0.9rem;
+    margin: 0 0.2rem;
+    border-radius: 1px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 0.7rem;
+  }
+
+  .form__button:active
+  {
+      background-color: #d6dfe9;
+  }
+
+  .form__button:focus
+  {
+      border-color: #2c3e50;
+  }
+
+  .form__button:hover {
+      color: #c24a0c;
+      border-color: #d2500d;
+  }

@@ -1,0 +1,80 @@
+@media screen and (max-width: 1087px) {
+  .navbar {
+    display: block;
+    align-items: center;
+    box-shadow: 2px 1px 4px 0px rgba(0, 0, 0, 0.281);
+  }
+
+  .navbar-item {
+    padding: 0.5rem .75rem 1rem;
+  }
+
+  .navbar .navbar-menu {
+    box-shadow: none;
+  }
+
+  .navbar .formStyle {
+    display: block;
+}
+
+  .navbar > .formStyle input {
+    width: 30%;
+  }
+
+  .field.is-grouped {
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 448px) {
+  .navbar-item .field {
+    flex-direction: column;
+  }
+
+  .navbar-menu {
+    justify-content: center;
+  }
+
+  .navbar-item {
+    padding: 0.5rem .75rem .5rem;
+  }
+
+  .field.is-grouped p {
+    text-align: right;
+  }
+
+  .field.is-grouped > .control:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .navbar > .formStyle input {
+    width: 50%;
+  }
+
+ .navbar-item h1 {
+    font-size: 1em;
+}
+
+  .navbar .form__input{
+    width: 51%;
+  }
+
+  .navbar .formStyle{
+    padding-right: 13px;
+    margin-top: 8px;
+    text-align: right;
+  }
+
+  .navbar .form__button{
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 330px) {
+.recipe__text {
+  margin-bottom: 15px;
+}
+}
+
