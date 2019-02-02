@@ -9,12 +9,10 @@ class Recipe extends React.Component {
   };
 
   componentWillMount = () => {
-    // console.log(this.state)
     this.retrieveData();
   };
 
   retrieveData = () => {
-    console.log(this.props);
     const recipe = this.props.location.state.recipe;
     this.setState({ activeRecipe: recipe });
   };
@@ -79,7 +77,7 @@ class Recipe extends React.Component {
                 <Link to="/" className="active-recipe__button">
                   Back
                 </Link>
-                  <a href={data.prepareMeal ? data.prepareMeal : data.prepareMeal2} className="prepareBtn">Prepare Meal</a>
+                  <a href={data.prepareMeal ? data.prepareMeal : data.prepareMeal2} className="prepareBtn" target="_blank">Prepare Meal</a>
                 </div>
                 <p className="calorie-disclaimer">
                   *Percent Daily Values are based on a 2,000 calorie diet. Your

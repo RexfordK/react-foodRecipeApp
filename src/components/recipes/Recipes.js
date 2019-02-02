@@ -12,7 +12,6 @@ class Recipes extends Component {
 
   spliceRecipeName = recipe => {
     let screenWidth = window.innerWidth;
-    console.log(screenWidth);
     if (screenWidth > 776) {
       if (recipe.label.length < 22) {
         return recipe.label;

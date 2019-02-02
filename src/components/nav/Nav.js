@@ -64,7 +64,7 @@ class Nav extends React.Component {
                   </a>
                 </p>
                 <p className="control">
-                  <a className="button is-primary" href="https://RkDevelopment.org">
+                  <a className="button is-primary" href="https://RkDevelopment.org" target="_blank">
                     <span className="icon">
                       <i className="fas fa-download" />
                     </span>
@@ -74,7 +74,7 @@ class Nav extends React.Component {
               </div>
             </div>
           </div>
-        <Form getRecipe={this.props.getRecipe}/>
+        <Form closeNav={this.toggleNavClick} getRecipe={this.props.getRecipe}/>
         </div>
       </nav>
     );

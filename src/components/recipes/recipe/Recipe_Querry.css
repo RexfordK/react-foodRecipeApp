@@ -1,8 +1,4 @@
 @media (max-width: 991px) {
-.container {
-  width: 75%;
-}
-
   .recipeInfo-btns {
     margin: 0;
   }
@@ -73,4 +69,3 @@
     justify-content: center;
   }
 }
-

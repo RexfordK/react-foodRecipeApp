@@ -49,4 +49,20 @@
   .navbar > .navbar-brand {
     font-size: 1em;
   }
+
+  .navbar .form__input{
+    width: 51%;
+  }
+
+  .navbar .formStyle{
+    padding-right: 13px;
+    margin-top: 8px;
+    text-align: right;
+  }
+
+  .navbar .form__button{
+    margin: 0;
+  }
 }
+
+

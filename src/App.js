@@ -3,7 +3,6 @@ import "./App.css";
 import "./App_Querry.css";
 import Form from "./components/form/Form.js";
 import Nav from "./components/nav/Nav.js";
-import Footer from "./components/footer/Footer.js";
 import Page404 from "./components/page404/Page404.js";
 
 import es6_promise from "es6-promise";
@@ -13,10 +12,10 @@ import Recipes from "./components/recipes/Recipes.js";
 // https://www.food2fork.com/api/search?key=397927fba082a77b5a8b29291cfc676a&q=shredded%20chicken
 const APP_ID = "47953d16";
 const APP_KEY = "f77c1ab3af8bd112915bad3fd3b00119";
-
 class App extends Component {
   state = {
-    recipeArray: []
+    recipeArray: [],
+    firstSearch: true
   };
 
   getRecipe = e => {
@@ -36,7 +35,7 @@ class App extends Component {
       APP_ID +
       "&app_key=" +
       APP_KEY +
-      "&from=0&to=50&count=0";
+      "&from=0&to=24&count=0";
 
     if (!recipeName) {
       recipeName = "fish";
@@ -55,8 +54,6 @@ class App extends Component {
         console.log(this.state.recipeArray);
       });
   };
-
-  
 
   handleData = () => {
     var data = this.state.recipeArray;
@@ -88,9 +85,9 @@ class App extends Component {
       <div className="App">
         <Nav getRecipe={this.getRecipe}/>
         <section className="section">
-          <Form getRecipe={this.getRecipe} />
-          {this.state.recipeArray.length === 0 ? <Page404/> : <Recipes recipeData={this.state.recipeArray} /> }
-        </section>
+          <Form getRecipe={this.getRecipe}/>
+          {this.state.recipeArray.length === 0 && localStorage.getItem("recipes") ? <Page404/> : <Recipes recipeData={this.state.recipeArray} /> }
+        </section>  
       </div>
     );
   }
