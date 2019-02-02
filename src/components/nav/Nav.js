@@ -12,27 +12,31 @@ class Nav extends React.Component {
   };
 
   toggleNavClick = () => {
-   this.setState((prevState) => ({
-    isActive: !prevState.isActive
-   }));
-   console.log(this.state);
-   this.toggleNav();
+    this.setState(prevState => ({
+      isActive: !prevState.isActive
+    }));
+    console.log(this.state);
+    this.toggleNav();
   };
 
   toggleNav = () => {
-    if(this.state.isActive) {
-      this.setState({toggleNavClass : "is-active"});
+    if (this.state.isActive) {
+      this.setState({ toggleNavClass: "is-active" });
     } else {
-      this.setState({toggleNavClass : ""});
+      this.setState({ toggleNavClass: "" });
     }
   };
+
+
 
   render() {
     return (
       <nav className="navbar is-transparent is-fixed-top">
         <div className="navbar-brand">
-          <a className="navbar-item" href="#top">
-            <h1><i className="fas fa-hamburger"></i>YummyFood</h1>
+          <a className="navbar-item" href="#" onClick={this.props.smoothScroll}>
+            <h1>
+              <i className="fas fa-hamburger" />YummyFood
+            </h1>
           </a>
           <div
             className="navbar-burger burger"
@@ -44,7 +48,10 @@ class Nav extends React.Component {
             <span />
           </div>
         </div>
-        <div id="navbarExternalLinks" className={"navbar-menu "+ this.state.toggleNavClass}>
+        <div
+          id="navbarExternalLinks"
+          className={"navbar-menu " + this.state.toggleNavClass}
+        >
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="field is-grouped">
@@ -64,7 +71,11 @@ class Nav extends React.Component {
                   </a>
                 </p>
                 <p className="control">
-                  <a className="button is-primary" href="https://RkDevelopment.org" target="_blank">
+                  <a
+                    className="button is-primary"
+                    href="https://RkDevelopment.org"
+                    target="_blank"
+                  >
                     <span className="icon">
                       <i className="fas fa-download" />
                     </span>
@@ -74,7 +85,11 @@ class Nav extends React.Component {
               </div>
             </div>
           </div>
-        <Form closeNav={this.toggleNavClick} getRecipe={this.props.getRecipe}/>
+          <Form
+            closeNav={this.toggleNavClick}
+            getRecipe={this.props.getRecipe}
+            smoothScroll={this.props.smoothScroll}
+          />
         </div>
       </nav>
     );
