@@ -1,14 +1,22 @@
 
-@media (max-width: 1130px) {
+@media (max-width: 1148px) {
     .row {
         justify-content: center;
     }
+
+    .form__input {
+        width: 25%;
+    }
 }
 
-@media (min-width: 576px) {
-    .col-md-4 {
-        -ms-flex: 0 0 29.333333%;
-        flex: 0 0 29.333333%;
-        max-width: 33.333333%;
+@media (max-width: 776px) {
+    .recipe__box-img {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .recipes_sub {
+        flex-direction: column;
     }
 }

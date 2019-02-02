@@ -1,24 +1,4 @@
-/* @media (max-width: 1130px) {
-  .section {
-max-width: 960px;
-margin: auto;
-  }
-} */
+@media (max-width: 1130px) {
 
-/* @media (min-width: 992px) {
-  .section {
-    max-width: 960px;
-  }
-}
+} 
 
-@media (min-width: 768px) {
-  .section {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 576px) {
-  .section {
-    max-width: 540px;
-  }
-} */

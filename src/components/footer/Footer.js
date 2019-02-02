@@ -5,7 +5,6 @@ const Footer = () => {
   return (
     <footer className="footer-con">
       <div className="rows-container">
-        <div className="footer-con">
           <h3>Connect With Me</h3>
           <ul className="social-list center">
             <li>
@@ -33,7 +32,6 @@ const Footer = () => {
           </div>
           <p>Copyright &copy; 2018 by Rexford Koduah. All rights reserved.</p>
         </div>
-      </div>
     </footer>
   );
 };
