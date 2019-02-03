@@ -104,7 +104,7 @@ class Recipe extends React.Component {
     // console.log(data);
     // console.log(this.props);
     return (
-      <div className="container" onLoad={() => window.scrollTo(0, 0)}>
+      <div className="container">
         <div className="recipe-con">{displayData()}</div>
       </div>
     );

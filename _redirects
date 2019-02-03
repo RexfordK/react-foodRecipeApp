@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://yummyfood.netlify.com/* http://rkdevelopment.org/yummyfood1!
