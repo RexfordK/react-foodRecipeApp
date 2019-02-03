@@ -12,6 +12,12 @@
   }
 }
 
+@media (min-width: 768px) {
+  .active-recipe__img{
+    min-height: 300px;
+  }
+}
+
 @media (max-width: 768px) {
   .activeRecipe-row1 {
     flex-direction: column;
