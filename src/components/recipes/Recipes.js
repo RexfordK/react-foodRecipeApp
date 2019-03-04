@@ -67,7 +67,7 @@ class Recipes extends Component {
                           {recipeLists.recipe.ingredients["length"] + " "}
                         </span>
                         <span className="recipes_subtitle_logo">
-                          ingrediants
+                          ingredients
                         </span>
                       </p>
                     </div>
