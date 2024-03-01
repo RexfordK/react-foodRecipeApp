@@ -32,9 +32,9 @@ class Nav extends React.Component {
     return (
       <nav className="navbar is-transparent is-fixed-top">
         <div className="navbar-brand">
-          <a className="navbar-item" href="/" onClick={this.props.smoothScroll}>
+          <a className="navbar-item" href="#top-of-page" onClick={this.props.smoothScroll}>
             <h1>
-              <i className="fas fa-hamburger" />YummyFood
+              <i className="fas fa-hamburger" id="top-of-page" />YummyFood
             </h1>
           </a>
           <div
