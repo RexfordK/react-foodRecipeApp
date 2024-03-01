@@ -14,8 +14,8 @@ import Recipes from "./components/recipes/Recipes.js";
 smoothscroll.polyfill();
 
 // https://www.food2fork.com/api/search?key=397927fba082a77b5a8b29291cfc676a&q=shredded%20chicken
-const APP_ID = "47953d16";
-const APP_KEY = "f77c1ab3af8bd112915bad3fd3b00119";
+const AID = "47953d16";
+const AK = "f77c1ab3af8bd112915bad3fd3b00119";
 class App extends Component {
   state = {
     recipeArray: [],
@@ -42,9 +42,9 @@ class App extends Component {
       "https://api.edamam.com/search?q=" +
       recipeName +
       "&app_id=" +
-      APP_ID +
+      AID +
       "&app_key=" +
-      APP_KEY +
+      AK +
       "&from=0&to=24&count=0";
 
 
